@@ -6,7 +6,7 @@ from django.utils import timezone
 
 # Create your views here.
 
-from .models import Choice, Question
+from .models import Choice, Question, Todo
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
@@ -30,6 +30,11 @@ class DetailView(generic.DetailView):
 class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
+
+class TodoView(generic.DetailView):
+    model = Todo
+    template_name = 'polls/todo.html'
+
     
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
