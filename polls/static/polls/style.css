@@ -7,9 +7,12 @@ li a {
 }
 */
 
+h3{
+    color:silver;
+}
+
 a {
     color: blue;
-
 }
 
 ul {

@@ -1,6 +1,6 @@
 from django.urls import path
 
-from . import views, forms
+from . import views
 
 app_name = 'polls'
 urlpatterns = [

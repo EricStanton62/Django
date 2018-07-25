@@ -7,6 +7,7 @@ from django.utils import timezone
 # Create your views here.
 
 from .models import Choice, Question, Todo
+#from .forms import todobox
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
