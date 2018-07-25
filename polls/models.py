@@ -1,6 +1,5 @@
 import datetime
 
-from django.db.models import BooleanField
 from django.db import models
 from django.utils import timezone
 
@@ -28,12 +27,12 @@ class Todo(models.Model):
     """title, a description, and a checkbox"""
     title_text = models.CharField(max_length=200)
     description_text = models.CharField(max_length=200)
-#checkbox_bool = models.BooleanField()
+    checkbox_bool = models.BooleanField(default=True)
     def __str__(self):
         return self.title_text
     def description(self):
         return self.description_text
-#def checkbox(self):
-#return self.checkbox_bool
+    def checkbox(self):
+        return self.checkbox_bool
 
     
